@@ -1,0 +1,535 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;500;600;700;800;900&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@500;600;700;800&display=swap');
+
+/* ||||| CONFIGS PADRÕES ||||| */
+* {
+    margin: 0;
+    padding: 0;
+
+    box-sizing: border-box;
+
+    outline: none;
+    text-decoration: none;
+
+    font-family: "Inter", sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+::-webkit-scrollbar {
+    width: 0.5rem;
+}
+::-webkit-scrollbar-thumb {
+    background: #2d3142;
+    border-radius: 2rem;
+}
+/* |||||  FIM CONFIGS PADRÕES ||||| */
+
+/* |||||  HEADER ||||| */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    width: 70%;
+    height: 6.25rem;
+
+    margin-left: 15%;
+}
+
+header .logo h1 {
+    font-size: 2.25rem;
+    color: #57CC99;
+
+    font-family: 'Inter', sans-serif;
+    font-weight: 800;
+}
+
+header .logo span {
+    color: #222222;
+    
+    font-family: 'Nunito', sans-serif;
+    font-weight: 500;
+}
+
+header .navigate ul {
+    display: flex;
+    align-items: center;
+
+    list-style: none;
+}
+
+header .navigate ul a {
+    font-size: 1.25rem;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+header .navigate ul a.margin {
+    margin-right: 1.8rem;
+    color: #222222;
+    transition: .3s;
+}
+
+header .navigate ul a.margin:hover {
+    color: #57CC99;
+}
+
+header .navigate ul a button {
+    border: 0;
+    border-radius: 3.1rem;
+    
+    padding: .65rem 2rem .65rem 2rem;
+
+    font-size: 1.25rem;
+    font-weight: 600;
+
+    cursor: pointer;
+
+    background-color: #8161C1;
+    color: #FFFFFF;
+}
+
+header.sticky {
+    background-color: #222222;
+    border-radius: 1.5rem;
+    
+    margin-top: .5rem;
+    padding: 0 1.75rem 0 1.75rem;
+    
+    position: fixed;
+    z-index: 5;
+
+    animation: fadeInDown; /* referring directly to the animation's @keyframe declaration */
+    animation-duration: .35s; /* don't forget to set a duration! */
+}
+
+header.sticky .logo span { color: #fafafa; }
+header.sticky .navigate ul a.margin { color: #fff; }
+header.sticky .navigate ul a.margin:hover { color:#57CC99 }
+/* ||||| FIM HEADER ||||| */
+
+
+/* |||||  HOME ||||| */
+@keyframes colorCycle {
+    0%, 45%, 50%, 90% {
+        filter: brightness(0);
+    }
+    11%, 35% {        
+        background: -webkit-linear-gradient(65deg, #301466, #8161C1);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+
+        filter: none;
+    }
+    61%, 85% {        
+        background: -webkit-linear-gradient(65deg, #57CC99, #80ED99);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+
+        filter: none;
+    }
+}
+
+section#home {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    margin-left: 15%;
+
+    min-height: 80vh;
+    width: 70%;
+}
+
+section#home h1 {
+    font-size: 3.6rem;
+    font-weight: 900;
+
+    text-transform: uppercase;
+}
+
+section#home span {
+    filter: brightness(0);
+
+    animation: colorCycle 10s ease-in-out infinite;
+}
+
+section#home h2 {
+    font-size: 1.3rem;
+    font-weight: 300;
+
+    color: #838383;
+}
+
+section#home h2 a {
+    color: #838383;
+    text-decoration: underline;
+}
+/* |||||  FIM HOME ||||| */
+
+/* |||||  BANNER ||||| */
+section.banner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    margin-left: 15%;
+    width: 70%;
+
+    height: 50rem;
+
+    background-image: url(../img/banner.png);
+    background-position: center; /* Center the image */
+    background-repeat: no-repeat; /* Do not repeat the image */
+    background-size: cover; /* Resize the background image to cover the entire container */
+
+    border-radius: 0.62rem;
+}
+
+section.banner h1 {
+    font-size: 3.6rem;
+    font-weight: 900;
+
+    color: #fff;
+
+    text-transform: uppercase;
+}
+/* |||||  FIM BANNER ||||| */
+
+/* |||||  QUEM SOMOS? ||||| */
+section#quem-somos {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    margin-top: 2.75rem;
+    margin-left: 18%;
+    width: 64%;
+
+    padding-top: 7rem;
+}
+
+section#quem-somos .left  { 
+    width: 60%;
+}
+
+section#quem-somos .left h1 { 
+    font-size: 3rem;
+    font-weight: 900;
+
+    text-transform: uppercase;
+}
+
+section#quem-somos .left h1 span {
+    background: -webkit-linear-gradient(65deg, #301466, #8161C1);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+section#quem-somos .left p {
+    font-size: 1.6rem;
+    font-weight: 400;
+    color: #3E3E3E;
+
+    margin-top: .75rem;
+}
+
+section#quem-somos .left ul {
+    margin: 4rem 0 4rem 0;
+    list-style: none;
+}
+
+section#quem-somos .left li {
+    display: flex;
+
+    font-family: 'Nunito', sans-serif;
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #2c2c2c;
+
+    margin-bottom: 1.5rem;
+}
+
+section#quem-somos .left li span {
+    margin-left: 1.75rem;
+}
+
+section#quem-somos .left button {
+    border: 0;
+    border-radius: 3.1rem;
+    
+    padding: 1rem;
+
+    padding: .65rem 2rem .65rem 2rem;
+
+    font-size: 1.2rem;
+    font-weight: 600;
+
+    cursor: pointer;
+
+    background-color: #2c2c2c;
+    color: #FFFFFF;
+}
+
+section#quem-somos .right { 
+    background-color: #8161C1; 
+    height: 40rem;
+    width: 35%;
+
+    border-radius: .6rem;
+
+    background-image: url(../img/prm-image.png);
+    background-position: center; /* Center the image */
+    background-repeat: no-repeat; /* Do not repeat the image */
+    background-size: cover; /* Resize the background image to cover the entire container */
+}
+/* |||||  FIM QUEM SOMOS? ||||| */
+
+/* |||||  FORMULARIO ||||| */
+section#form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    margin-top: 2.75rem;
+    margin-left: 18%;
+    width: 64%;
+
+    padding-top: 7rem;
+}
+
+section#form .alert-error,
+section#form .alert-success {
+    background: linear-gradient(47deg, rgba(34,34,34,1) 0%, rgba(42,42,42,1) 100%);
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    height: 6.25rem;
+    width: 40rem;
+    border-radius: .5rem;
+
+    position: absolute;
+    z-index: 2;
+    margin: 10rem 10% 0 10%;
+
+    visibility: hidden;
+
+    animation-duration: .25s; /* don't forget to set a duration! */
+}
+
+section#form .alert-error h1,
+section#form .alert-success h1 {
+    font-size: 1.25rem;
+    color: #fafafa;
+
+    text-transform: none;
+}
+
+section#form .alert-error img,
+section#form .alert-success img {
+    width: 30px;
+    margin-right: 1rem;
+}
+
+section#form form {
+    width: 100%;
+}
+
+section#form form h1 {
+    font-size: 3rem;
+    font-weight: 900;
+
+    text-transform: uppercase;
+}
+
+section#form form h1 span {
+    font-size: 1.25rem;
+    font-weight: 600;
+    
+    text-transform: lowercase;
+    color: #838383;
+}
+
+section#form form .flex {
+    display: flex;
+    justify-content: space-between;
+
+    margin-top: 1rem;
+}
+
+section#form form .flex .content {
+    width: 50%;
+
+    display: flex;
+    flex-direction: column-reverse;
+}
+
+section#form form .flex .content:nth-child(2) {
+    padding-left: 1rem;
+}
+
+section#form form input[type="text"],
+section#form form .customSelect,
+section#form form textarea {
+    position: relative;
+    box-sizing: content-box;
+    
+    height: 3.2rem;
+    padding: .4rem .85rem .4rem .85rem;
+    
+    border-radius: .6rem;
+    border: 2px solid #848484;
+    
+    font-size: 1.4rem;
+    color: #848484;
+    
+    width: 95%;
+    transition: .3s;
+}
+
+section#form form input[type="text"]::placeholder {
+    color: #bbbbbb;
+}
+
+section#form form label {
+    position: relative;
+
+    font-size: 1.4rem;
+    color: #848484;
+
+    margin: 0 0 .35rem .5rem;
+    transition: .3s;
+}
+
+section#form form input[type="text"]:focus {
+    border-color: #8161C1;
+    color: #8161C1;
+}
+
+section#form form input[type="submit"] {
+    height: 4.6rem;
+    width: 11rem;
+
+    border-radius: 5px;
+    border: 0;
+
+    background-color: #222222;
+
+    font-family: 'Nunito', sans-serif;
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: #fafafa;
+
+    cursor: pointer;
+}
+/* |||||  FIM FORMULARIO ||||| */
+
+/* |||||  FOOTER ||||| */
+footer {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    align-items: center;
+
+    margin-left: 15%;
+    margin-top: 4.5rem;
+
+    min-height: 75vh;
+    width: 70%;
+}
+
+footer .top {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding: 5.35rem;
+
+    width: 100%;
+    background-color: #222222;
+}
+
+footer .top h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #fff;
+
+    text-transform: uppercase;
+
+}
+footer .top h2 {
+    font-size: 1.5rem;
+    font-weight: 500;
+    color: #C3C3C3;
+
+    text-transform: lowercase;
+}
+
+footer .top button {
+    background-color: #57CC99;
+    
+    border: 0;
+    border-radius: .3rem;
+
+    width: 17rem;
+    height: 4rem;
+
+    margin-top: 2.5rem;
+
+    font-size: 1.5rem;
+    font-weight: 800;
+    color: #222222;
+
+    cursor: pointer;
+}
+
+footer .bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    width: 85%;
+    padding: 3rem 0 3rem;
+}
+
+footer .bottom .right {
+    display: flex;
+}
+
+footer .bottom .right .social ul,
+footer .bottom .right .navigation ul {
+    list-style: none;
+}
+
+footer .bottom .right .social ul li h1,
+footer .bottom .right .navigation ul li h1 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #000;
+}
+
+footer .bottom .right .social ul li,
+footer .bottom .right .navigation ul li a {
+    font-family: 'Nunito', sans-serif;
+    font-size: 1.35rem;
+    font-weight: 600;
+    color: #505050;
+
+    cursor: pointer;
+    transition: .2s;
+}
+
+footer .bottom .right .social ul li:hover,
+footer .bottom .right .navigation ul li a:hover {
+    color: #8161C1;
+}
+
+footer .bottom .right .social ul {
+    margin-right: 3.5rem;
+}
+/* |||||  FIM FOOTER ||||| */

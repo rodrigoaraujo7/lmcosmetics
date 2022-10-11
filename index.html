@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <META HTTP-EQUIV="Content-type" CONTENT="text/html; charset=UTF-8">
+
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+  />
+    <link rel="stylesheet" href="src/style/global.css" />
+
+    <title>LM Cosmetics</title>
+</head>
+<body>
+    <!-- |||||||||||||||||||| Header |||||||||||||||||||| -->
+    <header>
+        <div class="logo">
+            <h1>lm<span>cosmetics</span></h1>
+        </div>
+        <div class="navigate">
+            <ul>
+                <li><a href="#home" class="margin">inicio</a></li>
+                <li><a href="#quem-somos" class="margin">quem somos</a></li>
+                <li><a href="#form"><button>cadastro</button></a></li>
+            </ul>
+        </div>
+    </header>
+    <!-- |||||||||||||||||||| Fim Header |||||||||||||||||||| -->
+
+    <!-- |||||||||||||||||||| Home |||||||||||||||||||| -->
+    <section id="home">
+        <div class="content">
+            <center>
+                <h1>O tom do futuro e a tendência </h1>
+                <h1>De beleza da próxima <span>temporada.</span></h1>
+                <h2><a href="#form">inscreva-se</a> para entrar em contato conosco!</h2>
+            </center>
+        </div>
+    </section>
+    <!-- |||||||||||||||||||| Fim Home |||||||||||||||||||| -->
+
+    <!-- |||||||||||||||||||| Banner |||||||||||||||||||| -->
+    <section class="banner">
+        <div class="content">
+            <center>
+                <h1>Conheça um pouco</h1>
+                <h1>Mais sobre a gente!</span></h1>
+                <a href="#quem-somos"><img src="./src/img/double-down.png" width="50px" alt="icon"></a>
+            </center>
+        </div>
+    </section>
+    <!-- |||||||||||||||||||| Fim Banner |||||||||||||||||||| -->
+
+    <!-- |||||||||||||||||||| Quem somos? |||||||||||||||||||| -->
+    <section id="quem-somos">
+        <div class="left">
+            <h1>Quem somos<span>?</span></h1>
+
+            <p>Questionando os padrões para facilitar a sua relação com a beleza, a LM Cosmetics apresenta produtos multifuncionais, desenvolvendo a sua rotina de cuidados e elevando a sua autoestima de forma saudável. Nossos itens promovem resultados de qualidade ao mesmo tempo que tratam a pele e os cabelos de forma profunda e contínua.</p>
+            
+            <ul>
+                <li><img src="./src/img/check-one.png" width="35"/><span>Autoestima em questão de segundos.</span></li>
+                <li><img src="./src/img/check-one.png" width="35"/><span>Produtos que cabem no seu bolso.</span></li>
+                <li><img src="./src/img/check-one.png" width="35"/><span>Cadastro rápido e facil.</span></li>
+            </ul>
+
+            <button>saiba mais</button>
+        </div>
+        <div class="right"></div>
+    </section>
+    <!-- |||||||||||||||||||| Fim Quem somos? |||||||||||||||||||| -->
+
+    <!-- |||||||||||||||||||| Formulario |||||||||||||||||||| -->
+    <section id="form">
+        <form action="https://webto.salesforce.com/servlet/servlet.WebToLead?encoding=UTF-8" method="POST" target="_self" onsubmit="return validateForm()">
+            
+            <div class="alert-error">
+                <img src="./src/img/check-one-red.png" alt="success">
+                <h1>Não foi possivel realizar o cadastro! <br> <span id="par">preencha todos os campos!</h1>
+            </div>
+
+            <div class="alert-success">
+                <img src="./src/img/check-one-green.png" alt="success">
+                <h1>Cadastro criado com sucesso!</h1>
+            </div>
+
+            <h1>Cadastro <span>pontuação automatica</span></h1>
+
+            <input type=hidden name="oid" value="00D3t000005efI7">
+            <!-- <input type=hidden name="retURL" value="http://google.com"> -->
+            
+            <div class="flex">
+                <div class="content">
+                    <input  id="first_name" maxlength="40" name="first_name" class="firstName" size="20" type="text" />
+                    <label for="first_name">Primeiro Nome</label>
+                </div>
+                
+                <div class="content">
+                    <input  id="last_name" maxlength="80" name="last_name" class="lastName" size="20" type="text" />
+                    <label for="last_name">Sobrenome</label>
+                </div>
+            </div>
+            
+            <div class="flex">
+                <div class="content">    
+                    <input  id="email" maxlength="80" name="email" class="email" size="20" type="text" />
+                    <label for="email">Email</label>
+                </div>
+
+                <div class="content">
+                    <input  id="company" maxlength="40" name="company" class="company" size="20" type="text" />
+                    <label for="company">Empresa</label>
+                </div>
+            </div>
+            
+            <div class="flex">
+                <div class="content">
+                    <input  id="mobile" maxlength="15" name="mobile" size="20" class="phone" placeholder="(DDD) xxxxx-xxxx" type="text" />
+                    <label for="mobile">Celular</label>
+                </div>
+                
+                <div class="content">
+                    <input  id="00N3t00000JgDRf" maxlength="18" name="00N3t00000JgDRf" size="20" class="cnpj" placeholder="xx.xxx.xxx/xxx-xx" type="text" />
+                    <label for="00N3t00000JgDRf">CNPJ</label>
+                </div>
+            </div>
+            
+            <div class="flex">
+                <div class="content">
+                    <input  id="zip" maxlength="9" name="zip" size="20" class="cep" placeholder="xxxxx-xxx" type="text" />
+                    <label for="zip">CEP</label>
+                </div>
+
+                <div class="content">
+                    <select  id="00N3t00000K3PBs" name="00N3t00000K3PBs" class="customSelect" title="Estado">
+                        <option value="">-- Nenhum --</option>
+                        <option value="Acre">Acre</option>
+                        <option value="Alagoas">Alagoas</option>
+                        <option value="Amapá">Amapá</option>
+                        <option value="Amazonas">Amazonas</option>
+                        <option value="Bahia">Bahia</option>
+                        <option value="Ceará">Ceará</option>
+                        <option value="Espírito Santo">Espírito Santo</option>
+                        <option value="Goiás">Goiás</option>
+                        <option value="Maranhão">Maranhão</option>
+                        <option value="Mato Grosso">Mato Grosso</option>
+                        <option value="Mato Grosso do Sul">Mato Grosso do Sul</option>
+                        <option value="Minas Gerais">Minas Gerais</option>
+                        <option value="Pará">Pará</option>
+                        <option value="Paraíba">Paraíba</option>
+                        <option value="Paraná">Paraná</option>
+                        <option value="Pernambuco">Pernambuco</option>
+                        <option value="Piauí">Piauí</option>
+                        <option value="Rio de Janeiro">Rio de Janeiro</option>
+                        <option value="Rio Grande do Norte">Rio Grande do Norte</option>
+                        <option value="Rio Grande do Sul">Rio Grande do Sul</option>
+                        <option value="Rondônia">Rondônia</option>
+                        <option value="Roraima">Roraima</option>
+                        <option value="Santa Catarina">Santa Catarina</option>
+                        <option value="São Paulo">São Paulo</option>
+                        <option value="Sergipe">Sergipe</option>
+                        <option value="Tocantins">Tocantins</option>
+                        <option value="Distrito Federal">Distrito Federal</option>
+                    </select>
+                    <label for="00N3t00000JgDRf">Estado</label>
+                </div>
+            </div>
+
+            <div class="flex">
+                <div class="content">
+                    <input  id="city" maxlength="40" name="city" size="20" type="text" />
+                    <label for="city">Cidade</label>
+                </div>
+
+                <div class="content">
+                    <textarea name="description"></textarea>
+                    <label for="description">Descrição</label>
+                </div>
+            </div>
+            
+            <br />
+            <input type="submit" name="submit" value="Cadastrar">
+        </form>
+    </section>
+    <!-- |||||||||||||||||||| Fim Formulario |||||||||||||||||||| -->
+
+    <!-- |||||||||||||||||||| Footer |||||||||||||||||||| -->
+    <footer>
+        <div class="top">
+            <div class="content">
+                <center>
+                    <h1>Vai perder a chance de ficar</h1>
+                    <h1>bem com você mesmo?</h1>
+                    <h2>faça já o seu cadastro</h2>
+                    <a href="#form"><button>Cadastre-se</button></a>
+                </center>
+            </div>
+        </div>
+        <div class="bottom">
+            <div class="left">
+                <img src="./src/img/logo-preto-sem-fundo.png" alt="logo">
+            </div>
+            <div class="right">
+                <div class="social">
+                    <ul>
+                        <li><h1>Redes sociais</h1></li>
+                        <li>instagram</li>
+                        <li>twitter</li>
+                        <li>facebook</li>
+                    </ul>
+                </div>
+                <div class="navigation">
+                    <ul>
+                        <li><h1>Navegação</h1></li>
+                        <li><a href="#home">inicio</a></li>
+                        <li><a href="#quem-somos">quem somos</a></li>
+                        <li><a href="#form">cadastro</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- |||||||||||||||||||| Fim Footer |||||||||||||||||||| -->
+
+    <script src="./src/scripts/main.js"></script>
+</body>
+</html>
